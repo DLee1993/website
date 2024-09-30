@@ -12,6 +12,12 @@ body {
     background: var(--background);
 }
 
+@layer components {
+    .customWidth {
+        @apply w-full md:w-4/5 lg:w-3/5;
+    }
+}
+
 @layer utilities {
     .text-balance {
         text-wrap: balance;
