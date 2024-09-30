@@ -9,17 +9,17 @@ const Header = () => {
     const pathname = usePathname();
 
     return (
-        <header className="bg-background/50 customWidth h-14 flex justify-between items-center font-light px-4 mt-5 backdrop-blur-sm rounded-lg transition-all">
+        <header className="bg-background/50 customWidth h-14 flex justify-between items-center font-light mt-5 backdrop-blur-sm rounded-lg transition-all">
             <Link href="/">
                 <Image
                     src={profile}
                     alt="profileImage"
                     width={1000}
                     height={1000}
-                    className="size-12 rounded-full"
+                    className="size-10 rounded-full transition-all"
                 />
             </Link>
-            <ul className="flex gap-3 sm:gap-5 md:gap-7 transition-all">
+            <ul className="flex sm:gap-1 transition-all">
                 <li>
                     <Link
                         href="/selectedWork"
