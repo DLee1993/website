@@ -16,6 +16,9 @@ body {
     .customWidth {
         @apply w-full md:w-4/5 lg:w-3/5 mx-auto;
     }
+    .customLinkHover {
+        @apply bg-foreground bg-opacity-0 hover:bg-opacity-[3%] hover:ring-[1px] ring-accent/10 px-2 py-2 rounded-md transition-all;
+    }
 }
 
 @layer utilities {
