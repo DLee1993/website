@@ -19,13 +19,13 @@ const Header = () => {
                     className="size-12 rounded-full"
                 />
             </Link>
-            <ul className="flex gap-3 sm:gap-6 md:gap-9 transition-all">
+            <ul className="flex gap-3 sm:gap-5 md:gap-7 transition-all">
                 <li>
                     <Link
                         href="/selectedWork"
-                        className={
+                        className={`${
                             pathname === "/selectedWork" ? "text-foreground" : "text-foreground/50"
-                        }
+                        } customLinkHover`}
                     >
                         selected work
                     </Link>
@@ -33,9 +33,9 @@ const Header = () => {
                 <li>
                     <Link
                         href="/personalBlog"
-                        className={
+                        className={`${
                             pathname === "/personalBlog" ? "text-foreground" : "text-foreground/50"
-                        }
+                        } customLinkHover`}
                     >
                         blog
                     </Link>
@@ -43,9 +43,9 @@ const Header = () => {
                 <li>
                     <Link
                         href="/resume"
-                        className={
+                        className={`${
                             pathname === "/resume" ? "text-foreground" : "text-foreground/50"
-                        }
+                        } customLinkHover`}
                     >
                         resume
                     </Link>
