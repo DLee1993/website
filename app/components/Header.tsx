@@ -9,7 +9,7 @@ const Header = () => {
     const pathname = usePathname();
 
     return (
-        <header className="bg-background/50 customWidth h-14 mx-auto flex justify-between items-center font-light px-4 mt-5 backdrop-blur-sm rounded-lg transition-all">
+        <header className="bg-background/50 customWidth h-14 flex justify-between items-center font-light px-4 mt-5 backdrop-blur-sm rounded-lg transition-all">
             <Link href="/">
                 <Image
                     src={profile}
