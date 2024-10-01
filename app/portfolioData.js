@@ -1,5 +1,6 @@
 export const projects = [
     {
+        featured: true,
         projectName: "index",
         title: "Index: Your personal Organiser",
         descriptionSnippet:
@@ -92,5 +93,24 @@ export const resume = [
     {
         title: "Personal Interests",
         keynotes: ["Kickboxing, I have found a sport that pushes me  beyond my limits"],
+    },
+];
+
+export const blogs = [
+    {
+        featured: true,
+        blogName: "index",
+        title: "How to build a multi step form using React hook form",
+        descriptionSnippet:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint",
+        dateWritten: "feb 18, 2024",
+        readTime: "10",
+        textSnippet1:
+            "This is where you add a brief description about the project and the reason for undertaking this project, keep it short and to the point. Do not blab on, it will only bore the reader!!",
+        textSnippet2:
+            "This is where you talk in depth about the technologies used and why you used them, do not be afraid to say you want to try something new and it did'nt work so you reverted back to a more familiar technology ( i.e. bootstrap to tailwind)",
+        screenshot1: "/phone001.png",
+        screenshot2: "/phone002.png",
+        screenshot3: "/phone003.png",
     },
 ];
