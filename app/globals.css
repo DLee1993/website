@@ -5,6 +5,26 @@
 :root {
     --background: #181818;
     --foreground: #ffffff;
+    --fs-subHeading: 1.13rem;
+    --fs-supHeading: 0.88rem;
+}
+
+/* For browsers that support clamp  */
+@supports (font-size: clamp(1rem, 1vi, 1rem)) {
+    :root {
+        --fs-heading: clamp(1.25rem, 0.91vi + 1.02rem, 1.75rem);
+    }
+}
+/* For browsers that don't support clamp */
+@supports not (font-size: clamp(1rem, 1vi, 1rem)) {
+    :root {
+        --fs-heading: 1.13rem;
+    }
+    @media screen and (min-width: 1280px) {
+        :root {
+            --fs-heading: 1.75rem;
+        }
+    }
 }
 
 body {
@@ -14,7 +34,7 @@ body {
 
 @layer components {
     .customWidth {
-        @apply w-full md:w-4/5 lg:w-3/5 mx-auto px-4;
+        @apply w-full sm:w-10/12 lg:max-w-[850px] mx-auto px-4;
     }
     .customLinkHover {
         @apply bg-foreground bg-opacity-0 hover:bg-opacity-[3%] hover:ring-[1px] ring-accent/10 px-2 py-2 rounded-md transition-all;
