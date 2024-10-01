@@ -17,7 +17,7 @@ const Header = () => {
             <ul className="flex sm:gap-1 transition-all">
                 <li>
                     <Link href="/selectedWork" className="customLinkHover">
-                        selected work
+                        work
                     </Link>
                 </li>
                 <li>
