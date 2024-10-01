@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="customWidth">Footer</footer>
+    <footer>Footer</footer>
   )
 }
 export default Footer

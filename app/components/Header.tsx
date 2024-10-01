@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Header = () => {
     return (
-        <header className="customWidth h-20 sticky top-0 flex justify-between items-center font-light bg-background/85 backdrop-blur-md border-b-[1px] border-zinc-800 transition-all">
+        <header className="h-20 sticky top-0 flex justify-between items-center font-light bg-background/85 backdrop-blur-md border-b-[1px] border-zinc-800 transition-all">
             <Link href="/">
                 <Image
                     src={profile}

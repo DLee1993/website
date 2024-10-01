@@ -47,7 +47,7 @@ body::-webkit-scrollbar-thumb {
 
 @layer components {
     .customWidth {
-        @apply w-full sm:w-10/12 lg:max-w-[800px] mx-auto px-4;
+        @apply max-w-[800px] mx-auto px-4;
     }
     .customLinkHover {
         @apply bg-foreground bg-opacity-0 hover:bg-opacity-[3%] hover:ring-[1px] ring-accent/10 px-2 py-2 rounded-md transition-all;

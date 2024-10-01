@@ -26,9 +26,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${inter.className} ${lora.variable} antialiased`}>
+            <body className={`${inter.className} ${lora.variable} antialiased customWidth`}>
                 <Header />
-                <main className="customWidth">{children}</main>
+                <main>{children}</main>
                 <Footer />
             </body>
         </html>
