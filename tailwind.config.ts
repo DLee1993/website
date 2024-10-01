@@ -14,8 +14,11 @@ const config: Config = {
                 accent: "#d4d4d8",
             },
             fontFamily: {
-                Lora: "var(--font-Lora)"
-            }
+                Lora: "var(--font-Lora)",
+            },
+            fontSize: {
+                heading: "var(--fs-heading)",
+            },
         },
     },
     plugins: [],
