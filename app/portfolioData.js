@@ -3,8 +3,7 @@ export const projects = [
         featured: true,
         projectName: "index",
         title: "Index: Your personal Organiser",
-        descriptionSnippet:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint",
+        descriptionSnippet: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
         fullDescription:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum",
         projectType: "Full stack",
@@ -27,8 +26,7 @@ export const projects = [
     {
         projectName: "mydoctor",
         title: "My Doctor Healthcare app",
-        descriptionSnippet:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint",
+        descriptionSnippet: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         fullDescription:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum",
         projectType: "Full stack",
