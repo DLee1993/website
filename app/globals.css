@@ -5,8 +5,9 @@
 :root {
     --background: #181818;
     --foreground: #ffffff;
+    --accent: #d4d4d8;
     --fs-subHeading: 1.13rem;
-    --fs-supText: 0.88rem;
+    --fs-subText: 0.88rem;
 }
 
 /* For browsers that support clamp  */
@@ -30,6 +31,18 @@
 body {
     color: var(--foreground);
     background: var(--background);
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #2a2a2a;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #3f3f3f;
 }
 
 @layer components {
