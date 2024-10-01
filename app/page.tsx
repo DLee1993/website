@@ -1,4 +1,10 @@
+import Link from "next/link";
+import { projects, blogs } from "./portfolioData";
+
 export default function Home() {
+    const featuredProjects = projects.filter((project) => project.featured);
+    const featuredBlogs = blogs.filter((blog) => blog.featured);
+
     return (
         <section className="my-14 md:my-16 lg:my-20">
             <h1 className="text-heading font-Lora font-semibold">
@@ -15,6 +21,67 @@ export default function Home() {
                 <br />
                 Welcome to my digital personality.
             </p>
+            <section className="my-14 md:my-16 lg:my-20 flex flex-col gap-24">
+                <section id="featuredProjects">
+                    <aside className="flex justify-between items-center">
+                        <h2 className="font-medium text-subHeading">Featured Work</h2>
+                        <Link
+                            href="/selectedWork"
+                            className="text-subText bg-foreground bg-opacity-[1%] hover:bg-opacity-[3%] ring-[1px] ring-accent/10 px-4 py-2 rounded-md transition-all duration-150"
+                        >
+                            view all
+                        </Link>
+                    </aside>
+                    <ul className="text-base mt-12 flex flex-col gap-2">
+                        {featuredProjects.map((project, index) => (
+                            <li key={index}>
+                                <Link
+                                    href={`/selectedWork/${project.projectName}`}
+                                    className={`
+                                        text-accent hover:bg-zinc-800 border-b-2 ${
+                                            index === featuredProjects.length - 1 && "border-b-0"
+                                        } border-zinc-800 px-4 py-4 flex justify-between items-center transition-all duration-200`}
+                                >
+                                    <article>
+                                        <p className="font-medium">{project.title}</p>
+                                        <p className="text-subText max-w-lg">
+                                            {project.descriptionSnippet}
+                                        </p>
+                                    </article>
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+                <section id="featuredBlogs">
+                    <aside className="flex justify-between items-center">
+                        <h2 className="font-medium text-subHeading">Personal blogs</h2>
+                        <Link
+                            href="/selectedWork"
+                            className="text-subText bg-foreground bg-opacity-[1%] hover:bg-opacity-[3%] ring-[1px] ring-accent/10 px-4 py-2 rounded-md transition-all"
+                        >
+                            view all
+                        </Link>
+                    </aside>
+                    <ul className="text-base mt-12 flex flex-col gap-2">
+                        {featuredBlogs.map((blog, index) => (
+                            <li key={index}>
+                                <Link
+                                    href={`/selectedWork/${blog.blogName}`}
+                                    className={`
+                                        text-accent hover:bg-zinc-800 border-b-2 ${
+                                            index === featuredProjects.length - 1 && "border-b-0"
+                                        } border-zinc-800 px-4 py-4 flex justify-between items-center transition-all duration-200`}
+                                >
+                                    <article>
+                                        <p className="font-medium">{blog.title}</p>
+                                    </article>
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+            </section>
         </section>
     );
 }
