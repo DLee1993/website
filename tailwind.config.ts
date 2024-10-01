@@ -13,6 +13,9 @@ const config: Config = {
                 foreground: "#ffffff",
                 accent: "#d4d4d8",
             },
+            fontFamily: {
+                Lora: "var(--font-Lora)"
+            }
         },
     },
     plugins: [],
