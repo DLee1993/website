@@ -18,6 +18,8 @@ const config: Config = {
             },
             fontSize: {
                 heading: "var(--fs-heading)",
+                subHeading: "var(--fs-subHeading)",
+                subText: "var(--fs-subText)",
             },
         },
     },
