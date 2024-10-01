@@ -40,7 +40,7 @@ export default function Home() {
                                     className={`
                                         text-accent hover:bg-zinc-800/25 border-b-2 ${
                                             index === featuredProjects.length - 1 && "border-b-0"
-                                        } border-zinc-800 px-4 py-4 flex justify-between items-center transition-all duration-200`}
+                                        } border-zinc-800 sm:px-4 py-4 flex justify-between items-center transition-all duration-200`}
                                 >
                                     <article>
                                         <p className="font-medium">{project.title}</p>
@@ -71,7 +71,7 @@ export default function Home() {
                                     className={`
                                         text-accent hover:bg-zinc-800/25 border-b-2 ${
                                             index === featuredProjects.length - 1 && "border-b-0"
-                                        } border-zinc-800 px-4 py-4 flex justify-between items-center transition-all duration-200`}
+                                        } border-zinc-800 sm:px-4 py-4 flex justify-between items-center transition-all duration-200`}
                                 >
                                     <article>
                                         <p className="font-medium">{blog.title}</p>
