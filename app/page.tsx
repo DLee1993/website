@@ -27,9 +27,9 @@ export default function Home() {
                         <h2 className="font-medium text-subHeading">Featured Work</h2>
                         <Link
                             href="/selectedWork"
-                            className="text-subText bg-foreground bg-opacity-[1%] hover:bg-opacity-[3%] ring-[1px] ring-accent/10 px-4 py-2 rounded-md transition-all duration-150"
+                            className="text-subText font-medium text-accent hover:text-foreground tracking-wide transition-all duration-150"
                         >
-                            view all
+                            view all projects
                         </Link>
                     </aside>
                     <ul className="text-base mt-12 flex flex-col gap-2">
@@ -38,7 +38,7 @@ export default function Home() {
                                 <Link
                                     href={`/selectedWork/${project.projectName}`}
                                     className={`
-                                        text-accent hover:bg-zinc-800 border-b-2 ${
+                                        text-accent hover:bg-zinc-800/25 border-b-2 ${
                                             index === featuredProjects.length - 1 && "border-b-0"
                                         } border-zinc-800 px-4 py-4 flex justify-between items-center transition-all duration-200`}
                                 >
@@ -58,9 +58,9 @@ export default function Home() {
                         <h2 className="font-medium text-subHeading">Personal blogs</h2>
                         <Link
                             href="/selectedWork"
-                            className="text-subText bg-foreground bg-opacity-[1%] hover:bg-opacity-[3%] ring-[1px] ring-accent/10 px-4 py-2 rounded-md transition-all"
+                            className="text-subText font-medium text-accent hover:text-foreground tracking-wide transition-all duration-150"
                         >
-                            view all
+                            view all posts
                         </Link>
                     </aside>
                     <ul className="text-base mt-12 flex flex-col gap-2">
@@ -69,7 +69,7 @@ export default function Home() {
                                 <Link
                                     href={`/selectedWork/${blog.blogName}`}
                                     className={`
-                                        text-accent hover:bg-zinc-800 border-b-2 ${
+                                        text-accent hover:bg-zinc-800/25 border-b-2 ${
                                             index === featuredProjects.length - 1 && "border-b-0"
                                         } border-zinc-800 px-4 py-4 flex justify-between items-center transition-all duration-200`}
                                 >
