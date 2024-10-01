@@ -1,15 +1,10 @@
-"use client";
-
 import Image from "next/image";
 import profile from "@/public/heroDevImage.webp";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 const Header = () => {
-    const pathname = usePathname();
-
     return (
-        <header className="bg-background/50 customWidth h-14 flex justify-between items-center font-light mt-5 backdrop-blur-sm rounded-lg transition-all">
+        <header className="customWidth h-20 sticky top-0 flex justify-between items-center font-light bg-background/85 backdrop-blur-md border-b-[1px] border-zinc-800 transition-all">
             <Link href="/">
                 <Image
                     src={profile}
@@ -21,32 +16,17 @@ const Header = () => {
             </Link>
             <ul className="flex sm:gap-1 transition-all">
                 <li>
-                    <Link
-                        href="/selectedWork"
-                        className={`${
-                            pathname === "/selectedWork" ? "text-foreground" : "text-foreground/50"
-                        } customLinkHover`}
-                    >
+                    <Link href="/selectedWork" className="customLinkHover">
                         selected work
                     </Link>
                 </li>
                 <li>
-                    <Link
-                        href="/personalBlog"
-                        className={`${
-                            pathname === "/personalBlog" ? "text-foreground" : "text-foreground/50"
-                        } customLinkHover`}
-                    >
+                    <Link href="/personalBlog" className="customLinkHover">
                         blog
                     </Link>
                 </li>
                 <li>
-                    <Link
-                        href="/resume"
-                        className={`${
-                            pathname === "/resume" ? "text-foreground" : "text-foreground/50"
-                        } customLinkHover`}
-                    >
+                    <Link href="/resume" className="customLinkHover">
                         resume
                     </Link>
                 </li>
