@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { projects, blogs } from "./portfolioData";
+import Arrow from "./components/Arrow";
 
 export default function Home() {
     const featuredProjects = projects.filter((project) => project.featured);
@@ -22,6 +25,7 @@ export default function Home() {
                 Welcome to my digital personality.
             </p>
             <section className="my-14 md:my-16 lg:my-20 flex flex-col gap-24">
+                {/* Projects */}
                 <section id="featuredProjects">
                     <aside className="flex justify-between items-center">
                         <h2 className="font-medium text-subHeading">Featured Work</h2>
@@ -34,13 +38,10 @@ export default function Home() {
                     </aside>
                     <ul className="text-base mt-12 flex flex-col gap-2">
                         {featuredProjects.map((project, index) => (
-                            <li key={index}>
+                            <li key={index} className="group">
                                 <Link
                                     href={`/selectedWork/${project.projectName}`}
-                                    className={`
-                                        text-accent hover:bg-zinc-800/40 border-b-2 ${
-                                            index === featuredProjects.length - 1 && "border-b-0"
-                                        } border-zinc-800 sm:px-4 py-4 flex justify-between items-center transition-all duration-200`}
+                                    className="text-accent hover:bg-zinc-800/40 border-2 border-zinc-800 sm:px-4 py-4 flex justify-between items-center rounded-md transition-all duration-200"
                                 >
                                     <article>
                                         <p className="font-medium">{project.title}</p>
@@ -48,11 +49,14 @@ export default function Home() {
                                             {project.descriptionSnippet}
                                         </p>
                                     </article>
+                                    <Arrow />
                                 </Link>
                             </li>
                         ))}
                     </ul>
                 </section>
+
+                {/* Blogs */}
                 <section id="featuredBlogs">
                     <aside className="flex justify-between items-center">
                         <h2 className="font-medium text-subHeading">Personal blogs</h2>
@@ -63,19 +67,20 @@ export default function Home() {
                             view all posts
                         </Link>
                     </aside>
-                    <ul className="text-base mt-12 flex flex-col gap-2">
+                    <ul className="text-base mt-12 flex flex-col">
                         {featuredBlogs.map((blog, index) => (
-                            <li key={index}>
+                            <li key={index} className="group">
                                 <Link
                                     href={`/selectedWork/${blog.blogName}`}
                                     className={`
                                         text-accent hover:bg-zinc-800/40 border-b-2 ${
                                             index === featuredProjects.length - 1 && "border-b-0"
-                                        } border-zinc-800 sm:px-4 py-4 flex justify-between items-center transition-all duration-200`}
+                                        } border-zinc-800 sm:px-4 py-4 flex justify-between items-center rounded-t-sm transition-all duration-200`}
                                 >
                                     <article>
                                         <p className="font-medium">{blog.title}</p>
                                     </article>
+                                    <Arrow />
                                 </Link>
                             </li>
                         ))}
