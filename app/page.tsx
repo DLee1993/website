@@ -38,7 +38,7 @@ export default function Home() {
                                 <Link
                                     href={`/selectedWork/${project.projectName}`}
                                     className={`
-                                        text-accent hover:bg-zinc-800/25 border-b-2 ${
+                                        text-accent hover:bg-zinc-800/40 border-b-2 ${
                                             index === featuredProjects.length - 1 && "border-b-0"
                                         } border-zinc-800 sm:px-4 py-4 flex justify-between items-center transition-all duration-200`}
                                 >
@@ -69,7 +69,7 @@ export default function Home() {
                                 <Link
                                     href={`/selectedWork/${blog.blogName}`}
                                     className={`
-                                        text-accent hover:bg-zinc-800/25 border-b-2 ${
+                                        text-accent hover:bg-zinc-800/40 border-b-2 ${
                                             index === featuredProjects.length - 1 && "border-b-0"
                                         } border-zinc-800 sm:px-4 py-4 flex justify-between items-center transition-all duration-200`}
                                 >
