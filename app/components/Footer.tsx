@@ -2,7 +2,7 @@ import { scrollToTop } from "../hooks/ScrollToTop";
 import SocialLinks from "./SocialLinks";
 const Footer = () => {
     return (
-        <footer className="customWidth min-h-32 flex flex-col justify-evenly mt-48 mb-5">
+        <footer className="customWidth min-h-32 flex flex-col justify-evenly mt-48">
             <section className="flex justify-between items-center">
                 <SocialLinks />
                 <button onClick={scrollToTop}>back to top</button>
