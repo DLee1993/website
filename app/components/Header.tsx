@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Header = () => {
     return (
-        <header className="sticky top-0 font-light bg-gradient-to-b from-zinc-900 to-zinc-900/30 backdrop-blur-sm border-b-[1px] border-zinc-800 transition-all">
+        <header className="sticky top-0 z-50 font-light bg-gradient-to-b from-zinc-900 to-zinc-900/30 backdrop-blur-sm border-b-[1px] border-zinc-800 transition-all">
             <div className="customWidth h-20 flex justify-between items-center">
                 <Link href="/">
                     <Image
