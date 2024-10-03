@@ -12,7 +12,7 @@ const Header = () => {
                         alt="profileImage"
                         width={1000}
                         height={1000}
-                        className="size-10 rounded-full transition-all"
+                        className="size-10 aspect-square rounded-full transition-all"
                     />
                 </Link>
                 <ul className="flex sm:gap-1 transition-all">
