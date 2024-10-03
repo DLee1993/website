@@ -36,7 +36,7 @@ export default function Home() {
                             view all projects
                         </Link>
                     </aside>
-                    <ul className="text-base mt-12 flex flex-col gap-2">
+                    <ul className="text-base flex flex-col gap-2 mt-5 sm:mt-7 md:mt-9 lg:mt-12">
                         {featuredProjects.map((project, index) => (
                             <li key={index} className="group">
                                 <Link
@@ -61,13 +61,13 @@ export default function Home() {
                     <aside className="flex justify-between items-center">
                         <h2 className="font-medium text-subHeading">Personal blogs</h2>
                         <Link
-                            href="/selectedWork"
+                            href="/personalBlog"
                             className="text-subText font-medium text-zinc-300 hover:text-white tracking-wide transition-all duration-150"
                         >
                             view all posts
                         </Link>
                     </aside>
-                    <ul className="text-base mt-12 flex flex-col">
+                    <ul className="text-base flex flex-col mt-5 sm:mt-7 md:mt-9 lg:mt-12">
                         {featuredBlogs.map((blog, index) => (
                             <li key={index} className="group">
                                 <Link
