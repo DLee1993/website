@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { projects, blogs } from "./portfolioData";
 import Arrow from "./components/Arrow";
+import ContactForm from "./components/ContactForm";
 
 export default function Home() {
     const featuredProjects = projects.filter((project) => project.featured);
@@ -86,6 +87,7 @@ export default function Home() {
                     </ul>
                 </section>
             </section>
+            <ContactForm />
         </section>
     );
 }
