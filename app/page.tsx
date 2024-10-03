@@ -41,11 +41,11 @@ export default function Home() {
                             <li key={index} className="group">
                                 <Link
                                     href={`/selectedWork/${project.projectName}`}
-                                    className="text-accent hover:bg-zinc-800/40 border-2 border-zinc-800 sm:px-4 py-4 flex justify-between items-center rounded-md transition-all duration-200"
+                                    className="text-accent hover:bg-zinc-800/40 border-2 border-zinc-800 px-2 sm:px-4 py-4 flex justify-between items-center rounded-md transition-all duration-200"
                                 >
-                                    <article>
+                                    <article className="w-11/12">
                                         <p className="font-medium">{project.title}</p>
-                                        <p className="text-subText max-w-lg">
+                                        <p className="text-subText max-w-lg hidden min-[465px]:block">
                                             {project.descriptionSnippet}
                                         </p>
                                     </article>
@@ -77,7 +77,7 @@ export default function Home() {
                                             index === featuredProjects.length - 1 && "border-b-0"
                                         } border-zinc-800 sm:px-4 py-4 flex justify-between items-center rounded-t-sm transition-all duration-200`}
                                 >
-                                    <article>
+                                    <article className="w-4/5">
                                         <p className="font-medium">{blog.title}</p>
                                     </article>
                                     <Arrow />
