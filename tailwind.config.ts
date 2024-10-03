@@ -8,11 +8,6 @@ const config: Config = {
     ],
     theme: {
         extend: {
-            colors: {
-                background: "#181818",
-                foreground: "#ffffff",
-                accent: "#d4d4d8",
-            },
             fontFamily: {
                 Lora: "var(--font-Lora)",
             },

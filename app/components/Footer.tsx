@@ -8,7 +8,7 @@ const Footer = () => {
                 <button onClick={scrollToTop}>back to top</button>
             </section>
             <div className="h-[2px] w-full bg-zinc-800"></div>
-            <p className="text-center text-accent  text-subText">Copyright 2024 | David Lee</p>
+            <p className="text-center text-zinc-400  text-subText">Copyright 2024 | David Lee</p>
         </footer>
     );
 };

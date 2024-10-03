@@ -3,9 +3,6 @@
 @tailwind utilities;
 
 :root {
-    --background: #181818;
-    --foreground: #ffffff;
-    --accent: #d4d4d8;
     --fs-subHeading: 1.13rem;
     --fs-subText: 0.88rem;
 }
@@ -29,8 +26,7 @@
 }
 
 body {
-    color: var(--foreground);
-    background: var(--background);
+    @apply bg-zinc-900 text-white;
 }
 
 body::-webkit-scrollbar {
@@ -38,11 +34,11 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background-color: #2a2a2a;
+    @apply bg-zinc-800;
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #3f3f3f;
+    @apply bg-zinc-700;
 }
 
 @layer components {
@@ -50,7 +46,7 @@ body::-webkit-scrollbar-thumb {
         @apply max-w-[780px] mx-auto px-4;
     }
     .customLinkHover {
-        @apply bg-foreground bg-opacity-0 hover:bg-opacity-[3%] hover:ring-[1px] ring-accent/10 px-2 py-2 rounded-md transition-all;
+        @apply bg-white bg-opacity-0 hover:bg-opacity-[3%] hover:ring-[1px] ring-zinc-300/10 px-2 py-2 rounded-md transition-all;
     }
 }
 
