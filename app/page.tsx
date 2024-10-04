@@ -1,21 +1,28 @@
 "use client";
 
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { projects, blogs } from "./portfolioData";
 import Arrow from "./components/Arrow";
 import ContactForm from "./components/ContactForm";
+import { container, item } from "./lib/framerMotion";
 
 export default function Home() {
     const featuredProjects = projects.filter((project) => project.featured);
     const featuredBlogs = blogs.filter((blog) => blog.featured);
 
     return (
-        <section className="my-14 md:my-16 lg:my-20">
-            <h1 className="text-heading font-Lora font-semibold">
+        <motion.section
+            variants={container}
+            initial="hidden"
+            animate="show"
+            className="my-14 md:my-16 lg:my-20"
+        >
+            <motion.h1 variants={item} className="text-heading font-Lora font-semibold">
                 I&apos;m David Lee, a detail-orientated frontend developer specialising in creating
                 engaging, user-friendly experiences.
-            </h1>
-            <p className="text-zinc-300 mt-8">
+            </motion.h1>
+            <motion.p variants={item} className="text-zinc-300 mt-8">
                 I enjoy building; finding a project that challenges my present way of thinking
                 allows me to grow and develop more effectively. My current obsession is
                 accessibility; I want everyone to have a consistent experience while visiting my
@@ -24,10 +31,10 @@ export default function Home() {
                 <br />
                 <br />
                 Welcome to my digital personality.
-            </p>
+            </motion.p>
             <section className="my-14 md:my-16 lg:my-20 flex flex-col gap-24">
                 {/* Projects */}
-                <section id="featuredProjects">
+                <motion.section variants={item} id="featuredProjects">
                     <aside className="flex justify-between items-center">
                         <h2 className="font-medium text-subHeading">Featured Work</h2>
                         <Link
@@ -55,10 +62,10 @@ export default function Home() {
                             </li>
                         ))}
                     </ul>
-                </section>
+                </motion.section>
 
                 {/* Blogs */}
-                <section id="featuredBlogs">
+                <motion.section variants={item} id="featuredBlogs">
                     <aside className="flex justify-between items-center">
                         <h2 className="font-medium text-subHeading">Personal blogs</h2>
                         <Link
@@ -85,9 +92,9 @@ export default function Home() {
                             </li>
                         ))}
                     </ul>
-                </section>
+                </motion.section>
             </section>
             <ContactForm />
-        </section>
+        </motion.section>
     );
 }

@@ -8,6 +8,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { FormDataSchema } from "../lib/formSchema";
 import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
 import Arrow from "./Arrow";
+import { item } from "../lib/framerMotion";
 
 type Inputs = z.infer<typeof FormDataSchema>;
 
@@ -107,7 +108,11 @@ const ContactForm = () => {
     };
 
     return (
-        <section id="contact" className="flex flex-col justify-center items-start">
+        <motion.section
+            variants={item}
+            id="contact"
+            className="flex flex-col justify-center items-start"
+        >
             {messageSuccess ? (
                 <section className="w-full min-h-40 flex flex-col justify-center items-center gap-10">
                     <article className="text-center">
@@ -318,7 +323,7 @@ const ContactForm = () => {
                     </section>
                 </section>
             )}
-        </section>
+        </motion.section>
     );
 };
 export default ContactForm;
