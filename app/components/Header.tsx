@@ -12,6 +12,7 @@ const Header = () => {
                         alt="profileImage"
                         width={1000}
                         height={1000}
+                        priority
                         className="size-10 aspect-square rounded-full transition-all"
                     />
                 </Link>
