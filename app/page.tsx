@@ -22,7 +22,7 @@ export default function Home() {
                 I&apos;m David Lee, a detail-orientated frontend developer specialising in creating
                 engaging, user-friendly experiences.
             </motion.h1>
-            <motion.p variants={item} className="text-zinc-300 mt-8">
+            <motion.p variants={item} className="text-zinc-300 mt-8 text-subText sm:text-base">
                 I enjoy building; finding a project that challenges my present way of thinking
                 allows me to grow and develop more effectively. My current obsession is
                 accessibility; I want everyone to have a consistent experience while visiting my
