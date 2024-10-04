@@ -1,42 +1,55 @@
+"use client";
+
 import Link from "next/link";
 import { resume } from "../portfolioData";
+import SocialLinks from "../components/SocialLinks";
+import ContactForm from "../components/ContactForm";
+import { motion } from "framer-motion";
+import { item, container } from "../lib/framerMotion";
 
 export default function ResumePage() {
     return (
-        <main>
-            <section
-                id="resumeHero"
-                className="bg-foreground/5 rounded-b-3xl py-10 sm:py-12 px-8 sm:px-10 md:px-16 md:py-16"
-            >
-                <article className="flex flex-col gap-7">
-                    <h1 className="-text--hero leading-[110%] max-w-[350px] md:max-w-[439px] lg:max-w-[500px] font-bold">
-                        Change is inevitable, growth is optional.
-                    </h1>
-                    <p className="max-w-2xl leading-[151%] tracking-none font-medium">
-                        I am a detail-oriented and motivated developer who build responsive modern
-                        web apps. I seek a role that challenges me and lets me contribute to
-                        exciting projects, nurturing my growth in Frontend Development.
-                    </p>
+        <motion.section
+            variants={container}
+            initial="hidden"
+            animate="show"
+            className="flex flex-col gap-20 my-14 md:my-16 lg:my-20"
+        >
+            <motion.section variants={item} className="flex flex-col gap-7">
+                <h1 className="text-heading leading-[110%] font-bold font-Lora">
+                    Change is inevitable, growth is optional.
+                </h1>
+                <p className="leading-[151%] tracking-none font-medium text-zinc-300 text-subText sm:text-base">
+                    I am a detail-oriented and motivated developer who build responsive modern web
+                    apps. I seek a role that challenges me and lets me contribute to exciting
+                    projects, nurturing my growth in Frontend Development.
+                </p>
+                <aside className="flex flex-col min-[500px]:flex-row justify-between max-[500px]:items-start gap-y-6">
                     <Link
                         href="/resume.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         download
-                        className="block w-fit px-5 py-3 bg-foreground text-background text-sm rounded-md"
+                        className="flex justify-evenly items-center customLinkHover max-w-40 text-subText ring-[1px] ring-zinc-300/10 group"
                     >
-                        Download Resume as PDF
+                        Download Resume
                     </Link>
-                </article>
-            </section>
-            <section id="resumeContent" className="py-10 sm:py-12 md:py-16 px-8 sm:px-10 md:px-16">
+                    <SocialLinks />
+                </aside>
+            </motion.section>
+            <motion.section variants={item}>
                 {resume.map((item, index) => (
                     <section key={index} className="mb-12">
-                        <h2 className="-text--subHeading font-medium">{item.title}</h2>
+                        <h2 className="text-subHeading font-medium underline underline-offset-2">
+                            {item.title}
+                        </h2>
                         {item.courses
                             ? item.courses?.map((course, index) => (
-                                  <article key={index} className="my-5 ml-4">
-                                      <h3 className="font-bold mb-2.5">{course.courseProvider}</h3>
-                                      <ul className="list-disc ml-8">
+                                  <article key={index} className="my-6 ml-4">
+                                      <h3 className="font-bold mb-2.5 text-subHeading">
+                                          {course.courseProvider}
+                                      </h3>
+                                      <ul className="list-disc md:ml-8 space-y-2 text-zinc-300">
                                           {course.courseTitles.map((course, index) => (
                                               <li key={`course-${index}`}>{course}</li>
                                           ))}
@@ -44,15 +57,16 @@ export default function ResumePage() {
                                   </article>
                               ))
                             : item.keynotes.map((note, index) => (
-                                  <article key={index} className="my-5 ml-4">
-                                      <ul className="list-disc ml-8">
+                                  <article key={index} className="my-6 ml-4">
+                                      <ul className="list-disc md:ml-8">
                                           <li>{note}</li>
                                       </ul>
                                   </article>
                               ))}
                     </section>
                 ))}
-            </section>
-        </main>
+            </motion.section>
+            <ContactForm />
+        </motion.section>
     );
 }
