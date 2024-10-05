@@ -26,7 +26,7 @@ export default function PersonalBlogRootPage() {
                     {blogs.map((blog, index) => (
                         <li key={index} className="group">
                             <Link
-                                href={`/personalBlog/${blog.blogName}`}
+                                href={`/personalBlog/${blog.title}`}
                                 className={`border-b-2 ${
                                     index === blogs.length - 1 && "border-b-0"
                                 } text-zinc-300 hover:bg-zinc-800/40 border-zinc-800 px-2 sm:px-4 py-4 flex justify-between items-center transition-all duration-200`}
