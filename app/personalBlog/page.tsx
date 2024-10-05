@@ -22,11 +22,6 @@ export default function PersonalBlogRootPage() {
                 </p>
             </motion.article>
             <motion.section variants={item}>
-                <aside className="mt-12 grid place-items-end">
-                    <button className="flex justify-evenly items-center customLinkHover w-24 text-subText ring-[1px] ring-zinc-300/10 group">
-                        filter
-                    </button>
-                </aside>
                 <ul className="text-base flex flex-col mt-5 sm:mt-7 md:mt-9 lg:mt-12">
                     {blogs.map((blog, index) => (
                         <li key={index} className="group">
