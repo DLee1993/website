@@ -1,6 +1,6 @@
 type BlogTextContent = {
     string: string;
-    image?: string;
+    code?: string;
 };
 type Blog =
     | {
