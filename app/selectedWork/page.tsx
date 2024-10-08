@@ -15,8 +15,8 @@ export default function SelectedWorkRootPage() {
             className="my-14 md:my-16 lg:my-20"
         >
             <motion.article variants={item}>
-                <h1 className="text-subHeading font-medium">Selected Works</h1>
-                <p className="text-zinc-300 mt-6 text-subText sm:text-base">
+                <h1 className="text-heading font-medium">Selected Works</h1>
+                <p className="text-zinc-300 mt-4 text-subText sm:text-base">
                     This is the accumulation of my learning, here you will find everything from full
                     stack apps, landing pages and responsive components.
                 </p>

@@ -10,7 +10,7 @@
 /* For browsers that support clamp  */
 @supports (font-size: clamp(1rem, 1vi, 1rem)) {
     :root {
-        --fs-heading: clamp(1.13rem, 0.91vi + 0.9rem, 1.63rem);
+        --fs-heading: clamp(1.13rem, 1.36vi + 0.78rem, 1.88rem);
     }
 }
 /* For browsers that don't support clamp */
@@ -20,7 +20,7 @@
     }
     @media screen and (min-width: 1280px) {
         :root {
-            --fs-heading: 1.63rem;
+            --fs-heading: 1.88rem;
         }
     }
 }
@@ -40,7 +40,7 @@
         @apply max-w-[780px] mx-auto px-4;
     }
     .customLinkHover {
-        @apply bg-white bg-opacity-0 hover:bg-opacity-[3%] hover:ring-[1px] ring-zinc-300/10 px-2 py-2 rounded-md transition-all;
+        @apply bg-white bg-opacity-0 hover:bg-opacity-[3%] hover:ring-[1px] ring-zinc-300/10 px-2 md:px-4 py-2 rounded-md transition-all;
     }
 }
 
