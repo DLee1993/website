@@ -1,23 +1,24 @@
-export const WordCounter = (
-    blog:
-        | {
-              featured: boolean;
-              dateWritten: string;
-              title: string;
-              screenshot1: string;
-              screenshot2: string;
-              screenshot3: string;
-              textContent: {
-                  descriptionSnippet: string;
-                  textSnippet1: string;
-                  textSnippet2: string;
-              };
-          }
-        | undefined
-) => {
+type BlogTextContent = {
+    string: string;
+    image?: string;
+};
+type Blog =
+    | {
+          featured: boolean;
+          dateWritten: string;
+          title: string;
+          textContent: BlogTextContent[];
+      }
+    | undefined;
+
+export const WordCounter = (blog: Blog) => {
     let wordCount = 0;
-    const blogArray = Object.values(blog!.textContent);
-    wordCount = blogArray.join().split(/\s+/).length;
+    const blogArray: string[] = [];
+
+    blog?.textContent.forEach((item) => blogArray.push(item.string));
+
+    wordCount = blogArray.join().length;
+
     return wordCount;
 };
 

@@ -54,39 +54,65 @@ export const projects = [
 export const blogs = [
     {
         featured: true,
-        dateWritten: "feb 18, 2024",
-        title: "How to build a multi step form using React hook form",
-        screenshot1: "/phone001.png",
-        screenshot2: "/phone002.png",
-        screenshot3: "/phone003.png",
-        textContent: {
-            descriptionSnippet:
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia molestiae quas vel sint Lorem ipsum dolor sit amet consectetur adipisicing elit. This is where you talk in depth about the technologies used and why you used them, do not be afraid to say you want to try something new and it did'nt work so you reverted back to a more familiar technology ( i.e. bootstrap to tailwind )",
-            textSnippet1:
-                "This is where you add a brief description about the project and the reason for undertaking this project, keep it short and to the point. Do not blab on, it will only bore the reader!!",
-            textSnippet2:
-                "This is where you talk in depth about the technologies used and why you used them, do not be afraid to say you want to try something new and it did'nt work so you reverted back to a more familiar technology ( i.e. bootstrap to tailwind )",
-            textSnippet3:
-                " Lorem ipsum dolor sit amet, consectetueradipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum",
-        },
+        dateWritten: "Oct 08, 2024",
+        title: "Recursion in React",
+        textContent: [
+            {
+                string: "This is a quick tutorial on how to create a recursive function in react. Recursion is valuable when it comes to the traversal of data structures. Most people would argue that recursion is slower and more time consuming than other techniques, however, it is a good place to start for a junior dev to understand how to traverse data structures.",
+                image: "",
+            },
+            {
+                string: "This is where you add a brief description about the project and the reason for undertaking this project, keep it short and to the point. Do not blab on, it will only bore the reader!!",
+                image: "/ray-so-export.png",
+            },
+            {
+                string: "This is where you talk in depth about the technologies used and why you used them, do not be afraid to say you want to try something new and it did'nt work so you reverted back to a more familiar technology ( i.e. bootstrap to tailwind )",
+                image: "/ray-so-export.png",
+            },
+            {
+                string: " Lorem ipsum dolor sit amet, consectetueradipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum",
+                image: "/ray-so-export.png",
+            },
+        ],
     },
     {
         featured: true,
-        dateWritten: "jun 22, 2000",
-        title: "Let's build an animated filter component",
-        screenshot1: "/phone001.png",
-        screenshot2: "/phone002.png",
-        screenshot3: "/phone003.png",
-        textContent: {
-            descriptionSnippet:
-                "Lorem ipsum dolor sit amet, consectetueradipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum",
-            textSnippet1:
-                "This is where you add a brief description about the project and the reason for undertaking this project, keep it short and to the point. Do not blab on, it will only bore the reader!!, This is where you add a brief description about the project and the reason for undertaking this project, keep it short and to the point. Do not blab on, it will only bore the reader!!",
-            textSnippet2:
-                " Lorem ipsum dolor sit amet, consectetueradipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum",
-            textSnippet3:
-                " Lorem ipsum dolor sit amet, consectetueradipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum",
-        },
+        dateWritten: "Feb 08, 2024",
+        title: "Testing my code",
+        textContent: [
+            {
+                string: "This is a quick tutorial on how to create a recursive function in react. Recursion is valuable when it comes to the traversal of data structures. Most people would argue that recursion is slower and more time consuming than other techniques, however, it is a good place to start for a junior dev to understand how to traverse data structures.",
+                image: "",
+            },
+            {
+                string: "This is where you add a brief description about the project and the reason for undertaking this project, keep it short and to the point. Do not blab on, it will only bore the reader!!",
+                image: "/ray-so-export.png",
+            },
+            {
+                string: "This is where you talk in depth about the technologies used and why you used them, do not be afraid to say you want to try something new and it did'nt work so you reverted back to a more familiar technology ( i.e. bootstrap to tailwind )",
+                image: "/ray-so-export.png",
+            },
+            {
+                string: " Lorem ipsum dolor sit amet, consectetueradipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum",
+                image: "/ray-so-export.png",
+            },
+            {
+                string: "This is a quick tutorial on how to create a recursive function in react. Recursion is valuable when it comes to the traversal of data structures. Most people would argue that recursion is slower and more time consuming than other techniques, however, it is a good place to start for a junior dev to understand how to traverse data structures.",
+                image: "",
+            },
+            {
+                string: "This is where you add a brief description about the project and the reason for undertaking this project, keep it short and to the point. Do not blab on, it will only bore the reader!!",
+                image: "/ray-so-export.png",
+            },
+            {
+                string: "This is where you talk in depth about the technologies used and why you used them, do not be afraid to say you want to try something new and it did'nt work so you reverted back to a more familiar technology ( i.e. bootstrap to tailwind )",
+                image: "/ray-so-export.png",
+            },
+            {
+                string: " Lorem ipsum dolor sit amet, consectetueradipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum",
+                image: "/ray-so-export.png",
+            },
+        ],
     },
 ];
 
