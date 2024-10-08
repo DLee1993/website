@@ -59,19 +59,54 @@ export const blogs = [
         textContent: [
             {
                 string: "This is a quick tutorial on how to create a recursive function in react. Recursion is valuable when it comes to the traversal of data structures. Most people would argue that recursion is slower and more time consuming than other techniques, however, it is a good place to start for a junior dev to understand how to traverse data structures.",
-                image: "",
+                code: `function FileSystemItem({ node }) {
+    const [isOpen, setisOpen] = useState(false);
+
+    return (
+        <li key={node.name}>
+            <span>
+                {node.subNode && node.subNode.length > 0 && (
+                    <button
+                        style={{ transform: isOpen ? "rotate(0deg)" : "rotate(-90deg)" }}
+                        onClick={() => setisOpen(!isOpen)}
+                    >
+                        <ChevronIcon />
+                    </button>
+                )}
+                {node.subNode ? (
+                    <span style={{ marginLeft: node.subNode.length === 0 ? "30px" : "" }}>
+                        <FolderIcon />
+                    </span>
+                ) : (
+                    <span>
+                        <FileIcon />
+                    </span>
+                )}
+                {node.name}
+            </span>
+
+            {isOpen && (
+                <ul style={{ marginLeft: "60px" }}>
+                    {node.subNode?.map((node) => (
+                        <FileSystemItem node={node} key={node.name} />
+                    ))}
+                </ul>
+            )}  
+        </li>
+    );
+}`,
             },
             {
                 string: "This is where you add a brief description about the project and the reason for undertaking this project, keep it short and to the point. Do not blab on, it will only bore the reader!!",
-                image: "/ray-so-export.png",
+                code: "",
             },
             {
                 string: "This is where you talk in depth about the technologies used and why you used them, do not be afraid to say you want to try something new and it did'nt work so you reverted back to a more familiar technology ( i.e. bootstrap to tailwind )",
-                image: "/ray-so-export.png",
+                code: "",
             },
             {
                 string: " Lorem ipsum dolor sit amet, consectetueradipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum",
-                image: "/ray-so-export.png",
+                code: "",
             },
         ],
     },
@@ -82,35 +117,35 @@ export const blogs = [
         textContent: [
             {
                 string: "This is a quick tutorial on how to create a recursive function in react. Recursion is valuable when it comes to the traversal of data structures. Most people would argue that recursion is slower and more time consuming than other techniques, however, it is a good place to start for a junior dev to understand how to traverse data structures.",
-                image: "",
+                code: "",
             },
             {
                 string: "This is where you add a brief description about the project and the reason for undertaking this project, keep it short and to the point. Do not blab on, it will only bore the reader!!",
-                image: "/ray-so-export.png",
+                code: "",
             },
             {
                 string: "This is where you talk in depth about the technologies used and why you used them, do not be afraid to say you want to try something new and it did'nt work so you reverted back to a more familiar technology ( i.e. bootstrap to tailwind )",
-                image: "/ray-so-export.png",
+                code: "",
             },
             {
                 string: " Lorem ipsum dolor sit amet, consectetueradipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum",
-                image: "/ray-so-export.png",
+                code: "",
             },
             {
                 string: "This is a quick tutorial on how to create a recursive function in react. Recursion is valuable when it comes to the traversal of data structures. Most people would argue that recursion is slower and more time consuming than other techniques, however, it is a good place to start for a junior dev to understand how to traverse data structures.",
-                image: "",
+                code: "",
             },
             {
                 string: "This is where you add a brief description about the project and the reason for undertaking this project, keep it short and to the point. Do not blab on, it will only bore the reader!!",
-                image: "/ray-so-export.png",
+                code: "",
             },
             {
                 string: "This is where you talk in depth about the technologies used and why you used them, do not be afraid to say you want to try something new and it did'nt work so you reverted back to a more familiar technology ( i.e. bootstrap to tailwind )",
-                image: "/ray-so-export.png",
+                code: "",
             },
             {
                 string: " Lorem ipsum dolor sit amet, consectetueradipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum",
-                image: "/ray-so-export.png",
+                code: "",
             },
         ],
     },
