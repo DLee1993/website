@@ -54,7 +54,6 @@ export default function Home() {
                                 details={project}
                                 index={index}
                                 type={"project"}
-                                dataLength={index}
                             />
                         ))}
                     </ul>
