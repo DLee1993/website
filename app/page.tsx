@@ -3,9 +3,9 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { projects, blogs } from "./portfolioData";
-import Arrow from "./components/Arrow";
 import ContactForm from "./components/ContactForm";
 import { container, item } from "./lib/framerMotion";
+import IndividualLink from "./components/IndividualLink";
 
 export default function Home() {
     const featuredProjects = projects.filter((project) => project.featured);
@@ -18,7 +18,10 @@ export default function Home() {
             animate="show"
             className="my-14 md:my-16 lg:my-20"
         >
-            <motion.h1 variants={item} className="text-heading font-Lora font-semibold">
+            <motion.h1
+                variants={item}
+                className="text-heading leading-tight font-Lora font-semibold"
+            >
                 I&apos;m David Lee, a detail-orientated frontend developer specialising in creating
                 engaging, user-friendly experiences.
             </motion.h1>
@@ -46,20 +49,13 @@ export default function Home() {
                     </aside>
                     <ul className="text-base flex flex-col gap-2 mt-5 sm:mt-7 md:mt-9 lg:mt-12">
                         {featuredProjects.map((project, index) => (
-                            <li key={index} className="group">
-                                <Link
-                                    href={`/selectedWork/${project.projectName}`}
-                                    className="text-zinc-300 hover:bg-zinc-800/40 border-2 border-zinc-800 px-2 sm:px-4 py-4 flex justify-between items-center rounded-md transition-all duration-200"
-                                >
-                                    <article className="w-11/12">
-                                        <p className="font-medium">{project.title}</p>
-                                        <p className="text-subText max-w-lg hidden min-[465px]:block">
-                                            {project.descriptionSnippet}
-                                        </p>
-                                    </article>
-                                    <Arrow />
-                                </Link>
-                            </li>
+                            <IndividualLink
+                                key={index}
+                                details={project}
+                                index={index}
+                                type={"project"}
+                                dataLength={index}
+                            />
                         ))}
                     </ul>
                 </motion.section>
@@ -77,19 +73,13 @@ export default function Home() {
                     </aside>
                     <ul className="text-base flex flex-col mt-5 sm:mt-7 md:mt-9 lg:mt-12">
                         {featuredBlogs.map((blog, index) => (
-                            <li key={index} className="group">
-                                <Link
-                                    href={`/personalBlog/${blog.title}`}
-                                    className={`border-b-2 ${
-                                        index === featuredProjects.length - 1 && "border-b-0"
-                                    } text-zinc-300 hover:bg-zinc-800/40 border-zinc-800 px-2 sm:px-4 py-4 flex justify-between items-center transition-all duration-200`}
-                                >
-                                    <article className="w-4/5">
-                                        <p className="font-medium">{blog.title}</p>
-                                    </article>
-                                    <Arrow />
-                                </Link>
-                            </li>
+                            <IndividualLink
+                                key={index}
+                                details={blog}
+                                index={index}
+                                type={"blog"}
+                                dataLength={featuredBlogs.length}
+                            />
                         ))}
                     </ul>
                 </motion.section>
