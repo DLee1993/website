@@ -1,10 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import { blogs } from "../portfolioData";
-import Arrow from "../components/Arrow";
 import { motion } from "framer-motion";
 import { item, container } from "../lib/framerMotion";
+import IndividualLink from "../components/IndividualLink";
 
 export default function PersonalBlogRootPage() {
     return (
@@ -24,19 +23,13 @@ export default function PersonalBlogRootPage() {
             <motion.section variants={item}>
                 <ul className="text-base flex flex-col mt-5 sm:mt-7 md:mt-9 lg:mt-12">
                     {blogs.map((blog, index) => (
-                        <li key={index} className="group">
-                            <Link
-                                href={`/personalBlog/${blog.title}`}
-                                className={`border-b-2 ${
-                                    index === blogs.length - 1 && "border-b-0"
-                                } text-zinc-300 hover:bg-zinc-800/40 border-zinc-800 px-2 sm:px-4 py-4 flex justify-between items-center transition-all duration-200`}
-                            >
-                                <article className="w-4/5">
-                                    <p className="font-medium">{blog.title}</p>
-                                </article>
-                                <Arrow />
-                            </Link>
-                        </li>
+                        <IndividualLink
+                            key={index}
+                            details={blog}
+                            index={index}
+                            type={"blog"}
+                            dataLength={blogs.length}
+                        />
                     ))}
                 </ul>
             </motion.section>
