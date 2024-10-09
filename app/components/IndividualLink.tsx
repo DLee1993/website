@@ -30,17 +30,14 @@ type Details = {
     }[];
 };
 
-const IndividualLink = ({
-    details,
-    index,
-    type,
-    dataLength,
-}: {
+type Props = {
     details: Details;
     index: number;
     type: string;
-    dataLength: number;
-}) => {
+    dataLength?: number;
+};
+
+const IndividualLink = ({ details, index, type, dataLength }: Props) => {
     const offSetX = useMotionValue(-100);
     const offSetY = useMotionValue(-100);
     const border = useRef<HTMLDivElement>(null);
@@ -91,7 +88,7 @@ const IndividualLink = ({
                 <Link
                     href={`/personalBlog/${details.title}`}
                     className={`${
-                        dataLength - 1 === index ? "border-b-0" : "border-b-2"
+                        dataLength && dataLength - 1 === index ? "border-b-0" : "border-b-2"
                     } text-zinc-300 hover:bg-zinc-800/20 border-zinc-800 px-2 sm:px-4 py-4 flex justify-between items-center transition-all duration-200`}
                 >
                     <article className="w-4/5">
