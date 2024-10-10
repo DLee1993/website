@@ -2,14 +2,13 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { projects, blogs } from "./portfolioData";
+import { projects } from "./portfolioData";
 import ContactForm from "./components/ContactForm";
 import { container, item } from "./lib/framerMotion";
 import IndividualLink from "./components/IndividualLink";
 
 export default function Home() {
     const featuredProjects = projects.filter((project) => project.featured);
-    const featuredBlogs = blogs.filter((blog) => blog.featured);
 
     return (
         <motion.section
@@ -29,8 +28,7 @@ export default function Home() {
                 I enjoy building; finding a project that challenges my present way of thinking
                 allows me to grow and develop more effectively. My current obsession is
                 accessibility; I want everyone to have a consistent experience while visiting my
-                websites. I also create blog posts to strengthen my ability to communicate train of
-                thought.
+                websites.
                 <br />
                 <br />
                 Welcome to my digital personality.
@@ -54,30 +52,6 @@ export default function Home() {
                                 details={project}
                                 index={index}
                                 type={"project"}
-                            />
-                        ))}
-                    </ul>
-                </motion.section>
-
-                {/* Blogs */}
-                <motion.section variants={item} id="featuredBlogs">
-                    <aside className="flex justify-between items-center">
-                        <h2 className="font-medium text-subHeading">Personal blogs</h2>
-                        <Link
-                            href="/personalBlog"
-                            className="text-subText font-medium text-zinc-300 hover:text-white tracking-wide transition-all duration-150"
-                        >
-                            view all posts
-                        </Link>
-                    </aside>
-                    <ul className="text-base flex flex-col mt-5 sm:mt-7 md:mt-9 lg:mt-12">
-                        {featuredBlogs.map((blog, index) => (
-                            <IndividualLink
-                                key={index}
-                                details={blog}
-                                index={index}
-                                type={"blog"}
-                                dataLength={featuredBlogs.length}
                             />
                         ))}
                     </ul>
