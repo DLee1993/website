@@ -63,7 +63,7 @@ const IndividualLink = ({ details, index, type, dataLength }: Props) => {
             {type === "project" && (
                 <motion.div
                     ref={border}
-                    className="hidden lg:block absolute inset-0 border-2 rounded-xl border-zinc-300/20 pointer-events-none"
+                    className="hidden lg:block absolute inset-0 border-2 rounded-xl border-zinc-300/50 pointer-events-none"
                     style={{
                         maskImage: maskImage,
                         WebkitMaskImage: maskImage,
