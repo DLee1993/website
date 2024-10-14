@@ -26,9 +26,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${inter.className} ${lora.variable} antialiased`}>
+            <body className={`${inter.className} ${lora.variable} antialiased min-h-screen flex flex-col justify-between items-center`}>
                 <Header />
-                <main className="customWidth">{children}</main>
+                <main className="customWidth flex-1">{children}</main>
                 <Footer />
             </body>
         </html>

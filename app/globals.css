@@ -37,7 +37,7 @@
 
 @layer components {
     .customWidth {
-        @apply max-w-[780px] mx-auto px-4;
+        @apply w-full max-w-[780px] mx-auto px-4;
     }
     .customLinkHover {
         @apply bg-white bg-opacity-0 hover:bg-opacity-[3%] hover:ring-[1px] ring-zinc-300/10 px-2 md:px-4 py-2 rounded-md transition-all;
